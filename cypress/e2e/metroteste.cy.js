@@ -15,7 +15,7 @@ describe('Painel do Metrô SP - Testes Automatizados', () => {
   // 1. Validação do Título
   it('Exibe o título principal corretamente', () => {
     cy.get('h1.text-3xl.font-bold.text-gray-900')
-      .should('have.text', 'Status do Metrô de São Paulo');
+    .should('have.text', 'Status do Metrô de São Paulo');
   });
 
   // 2. Verifica todas as linhas e seus status
@@ -23,7 +23,6 @@ describe('Painel do Metrô SP - Testes Automatizados', () => {
     it(`Valida presença e status da ${linha.nome}`, () => {
       cy.get(linha.seletor)
         .should('contain', linha.nome)
-        .parent() // Navega para o container pai para buscar o status
         .then(($container) => {
           // Verifica se o status é "Normal Operation" ou "Delays Reported"
           expect($container.text()).to.match(/Normal Operation|Delays Reported/);
@@ -35,7 +34,6 @@ describe('Painel do Metrô SP - Testes Automatizados', () => {
   // 3. Teste específico para atrasos na Linha 3
   it('Destaca atraso na Linha 3 - Vermelho', () => {
     cy.get(linhas[2].seletor)
-      .parent()
       .should('contain', 'Delays Reported')
   });
 });
