@@ -1,5 +1,5 @@
 # AUTOMAÇÃO - CYPRESS AUTOMATION
-_Este é o meu projeto de automação para a aplicação metro-uptime, um site estruturado para status do Metro de São Paulo, minha automação foi desenvolvida com o objetivo de validar algumas das funcionalidades principais do sistema
+_Este é o meu projeto de automação para a aplicação metro-uptime, um site estruturado para status do Metro de São Paulo, minha automação foi desenvolvida com o objetivo de validar algumas das funcionalidades principais do sistema_
 
 Este projeto utiliza o Cypress para automatizar os testes. Cypress é um framework de testes end-to-end baseado em JavaScript, que permite aos desenvolvedores escrever testes e executá-los em navegadores reais.
 
