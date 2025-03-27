@@ -49,7 +49,7 @@ describe('Painel do Metrô SP - Testes Automatizados', () => {
       cy.get(linha.nomeSeletor)
         .should('contain', linha.nome);
       
-      // Verifica o status (forma correta sem .or)
+      // Verifica o status
       cy.get(linha.statusSeletor).should(($el) => {
         const text = $el.text().trim();
         expect(text === 'Normal Operation' || text === 'Delays Reported').to.be.true;
